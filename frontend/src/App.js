@@ -1,9 +1,14 @@
 import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import VisitorRouteGroup from './components/routes/VisitorRouteGroup';
 
 function App() {
   return (
-    <h2>Cine are noroc </h2>
+    <div className="App">
+      <div className="wrapper">
+        <VisitorRouteGroup />
+      </div>
+    </div>
   );
 }
 
