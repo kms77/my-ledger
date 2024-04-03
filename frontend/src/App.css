@@ -1,0 +1,23 @@
+.contact-details-columnn{
+  background-color: #23AAC3;
+  background-color: #027085;
+  background-color: #73CCDD;
+  background-color: #001013;
+}
+
+.contact-details-column{
+  background-color: #027085;
+  font-size: 18px
+}
+
+.text-color-white{
+  color: #FCFCFC !important;
+}
+
+.text-color-black{
+  color: #001013 !important;
+}
+
+.visitor-navbar{
+  background-color: #23AAC3 !important;
+}
