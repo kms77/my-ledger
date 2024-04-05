@@ -27,7 +27,7 @@ const AboutV = () => {
         <li className="list-group-item">
           <i className="fas fa-check-circle me-2 text-primary"></i> Simplitate: Credem că aplicația noastră ar trebui să fie ușor de utilizat și înțeles de către toate PFA-urile, indiferent de expertiza lor tehnică.
         </li>      
-          <Image src="\public\img\security.jpg">
+          <Image src="">
           </Image>
         </Stack>  
         <li className="list-group-item">
