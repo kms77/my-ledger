@@ -1,5 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Stack,Image} from 'react-bootstrap';
+
 
 const AboutV = () => {
     return(
@@ -21,9 +23,13 @@ const AboutV = () => {
       </p>
       <h2>Valorile Noastre</h2>
       <ul className="list-group list-group-flush">
+        <Stack direction="horizontal">
         <li className="list-group-item">
           <i className="fas fa-check-circle me-2 text-primary"></i> Simplitate: Credem că aplicația noastră ar trebui să fie ușor de utilizat și înțeles de către toate PFA-urile, indiferent de expertiza lor tehnică.
-        </li>
+        </li>      
+          <Image src="\public\img\security.jpg">
+          </Image>
+        </Stack>  
         <li className="list-group-item">
           <i className="fas fa-lock me-2 text-success"></i> Securitate: Luăm foarte în serios securitatea datelor și folosim cele mai recente tehnologii pentru a vă proteja informațiile.
         </li>
