@@ -22,7 +22,7 @@ const AboutV = () => {
       </Stack>
       <Stack className="styled-stack-white">
         <h2 className="display-4 mb-4 ">Misiunea Noastră</h2>
-        <p>
+        <p className="lead">
           Misiunea noastră este de a oferi PFA-urilor instrumentele și resursele
           de care au nevoie pentru a prospera pe piața competitivă de astăzi.
           Credem că fiecare antreprenor merită șansa de a reuși și suntem
@@ -32,7 +32,7 @@ const AboutV = () => {
       <Stack className="styled-stack-blue">
         <h2 className="display-4 mb-4 ">Valorile Noastre</h2>
         <br></br>
-        <ul className="list-group list-group-flush" id="special-list">
+        <ul className="list-group list-group-flush lead text-center" id="special-list">
           <li className="list-group-item" id="about-page-item">
             <i className="fas fa-check-circle me-2 text-primary"></i>{" "}
             Simplitate: Credem că aplicația noastră ar trebui să fie ușor de
