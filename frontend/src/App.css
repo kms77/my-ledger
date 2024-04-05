@@ -1,0 +1,18 @@
+.about-container .styled-stack-blue{
+    background-color: #027085;
+    color: white;
+    border-bottom-left-radius: 7.5px;
+    border-bottom-right-radius: 7.5px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.about-container .styled-stack-white{
+    margin-bottom: 40px;
+}
+
+#about-page-item{
+    background-color: #027085;
+    color: white;
+}
+
