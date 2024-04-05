@@ -1,9 +1,10 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const AboutV = () => {
     return(
         <div className="container about-container">
-      <h1 className="display-4 mb-4">Despre Noi</h1>
+      <h1 className="display-4 mb-4 ">Despre Noi</h1>
       <p className="lead">
         Înțelegem provocările pe care le întâmpinați în gestionarea afacerii dvs. ca PFA (Persoană Fizică Autorizată) în România. 
         Aplicația noastră de gestionare PFA este concepută pentru a vă simplifica viața și a vă ajuta să vă concentrați pe ceea ce contează cel mai mult - 
@@ -34,7 +35,7 @@ const AboutV = () => {
         </li>
       </ul>
       <p>
-        Suntem încrezători că aplicația noastră de gestionare PFA vă poate ajuta să economisiți timp, bani și stres. 
+        Suntem încrezători că aplicația noastră de gestionare PFA vă poate ajuta să reduceti  timpul, banii și stresul asociat gestionarii unei persoane juridice. 
         Înregistrați-vă pentru o încercare gratuită astăzi și vedeți cum vă putem ajuta să duceți afacerea dvs. la următorul nivel!
       </p>
     </div>
