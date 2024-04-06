@@ -11,10 +11,10 @@ const VisitorNavbar = () => {
                     <Nav className="col d-flex justify-content-start">
                         <Nav.Link eventKey={1} href="/about" className="mx-3">Despre noi</Nav.Link>
                         <NavDropdown eventKey={2} title="Funcționalități" id="basic-nav-dropdown" className="mx-3">
-                            <NavDropdown.Item eventKey={2.1} href="#">Action</NavDropdown.Item>
-                            <NavDropdown.Item eventKey={2.2} href="#">Another action</NavDropdown.Item>
+                            <NavDropdown.Item eventKey={2.1} href="#">Calculator taxe si impozite PFA</NavDropdown.Item>
+                            <NavDropdown.Item eventKey={2.2} href="#">Gestionare facturi</NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link eventKey={3} href="#" className="mx-3">Contact</Nav.Link>
+                        <Nav.Link eventKey={3} href="/contact" className="mx-3">Contact</Nav.Link>
                     </Nav> 
                 </Navbar.Collapse>
             </Container>
