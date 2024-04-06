@@ -8,8 +8,8 @@ const VisitorNavbar = () => {
                 <Navbar.Brand href="#">My Ledger</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="col d-flex justify-content-start text-color-black">
-                        <Nav.Link eventKey={1} href="#" className="mx-3">Despre noi</Nav.Link>
+                    <Nav className="col d-flex justify-content-start">
+                        <Nav.Link eventKey={1} href="/about" className="mx-3">Despre noi</Nav.Link>
                         <NavDropdown eventKey={2} title="Funcționalități" id="basic-nav-dropdown" className="mx-3">
                             <NavDropdown.Item eventKey={2.1} href="#">Action</NavDropdown.Item>
                             <NavDropdown.Item eventKey={2.2} href="#">Another action</NavDropdown.Item>
