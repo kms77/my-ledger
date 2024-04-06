@@ -25,6 +25,7 @@ const Contact = () => {
                             href="Contact us image" 
                             className="contact-image" 
                             style={{width: "20vw", minWidth: "300px"}}
+                            alt="contactUsImage"
                         />
                     </div>
                 </Col>

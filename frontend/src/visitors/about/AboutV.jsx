@@ -1,14 +1,14 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Stack,Image } from "react-bootstrap";
+import { Stack } from "react-bootstrap";
+import securityImage from '../../assets/images/security.jpg';
 
 const AboutV = () => {
   return (
     <div className="container about-container">
+      <img className="about-title-img" src={securityImage} alt="securityImage"/>
       <Stack direction="horizontal" gap={3}>
-        <Image src="/public/assets/images/security.jpg">
-          {/* to add image for background */}
-        </Image>
+        
         <h1 className="display-4 mb-4 ">Despre Noi</h1>
       </Stack>
       <Stack className="styled-stack-blue">
