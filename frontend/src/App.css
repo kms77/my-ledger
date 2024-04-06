@@ -85,3 +85,26 @@
 .calculate-button:hover {
   background-color: #027085;
 }
+
+.card-header{
+  height: 200px;
+}
+
+.card-image{
+  height:200px;
+  width:200px !important;
+}
+
+.card:hover{
+  box-shadow: 10px 10px 5px #e1e1e1;
+  transform: scale(1.1);
+}
+
+.card-link{
+  text-decoration: none;
+  color:#001013;
+}
+
+.card{
+  width: 400px;
+}
