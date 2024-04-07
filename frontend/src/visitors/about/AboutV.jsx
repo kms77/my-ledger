@@ -6,7 +6,7 @@ import securityImage from '../../assets/images/security.jpg';
 const AboutV = () => {
   return (
     <div className="container about-container">
-      <img className="about-title-img" src={securityImage} alt="securityImage"/>
+      <img id="about-title-img" src={securityImage} alt="securityImage"/>
       <Stack direction="horizontal" gap={3}>
         
         <h1 className="display-4 mb-4 ">Despre Noi</h1>
