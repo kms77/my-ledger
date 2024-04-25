@@ -1,7 +1,10 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Stack, Row, Col, Form } from "react-bootstrap";
-import securityImage from "../../assets/images/security.jpg";
+import { Stack, Row, Col } from "react-bootstrap";
+import securityImage from "../../assets/images/security.png";
+import assistanceImage from "../../assets/images/assistance.png"
+import simplicityImage from "../../assets/images/simplicity.png"
+import accessibilityImage from "../../assets/images/accesiblity.png"
 
 const AboutV = () => {
   return (
@@ -40,15 +43,15 @@ const AboutV = () => {
               <Col lg={6} className="contact-image-column">
                 <div className="d-flex justify-content-center align-items-center">
                   <img
-                    src={securityImage}
+                    src={simplicityImage}
                     href="Contact us image"
                     className="contact-image"
                     style={{ width: "20vw", minWidth: "300px" }}
-                    alt="securityImage"
+                    alt="simplicityImage"
                   />
                 </div>
               </Col>
-              <Col lg={6} className="contact-image-column">
+              <Col lg={6} className="about-details-column">
                 <i className="fas fa-check-circle me-2 text-primary"></i>{" "}
                 Simplitate: Credem că aplicația noastră ar trebui să fie ușor de
                 utilizat și înțeles de către toate PFA-urile, indiferent de
@@ -58,7 +61,7 @@ const AboutV = () => {
           </li>
           <li className="list-group-item" id="about-page-item">
             <Row className="my-5">
-              <Col lg={6} className="contact-image-column">
+              <Col lg={6} className="about-details-column">
                 <i className="fas fa-lock me-2 text-success"></i> Securitate:
                 Luăm foarte în serios securitatea datelor și folosim cele mai
                 recente tehnologii pentru a vă proteja informațiile.
@@ -81,37 +84,37 @@ const AboutV = () => {
               <Col lg={6} className="contact-image-column">
                 <div className="d-flex justify-content-center align-items-center">
                   <img
-                    src={securityImage}
+                    src={accessibilityImage}
                     href="Contact us image"
                     className="contact-image"
                     style={{ width: "20vw", minWidth: "300px" }}
-                    alt="securityImage"
+                    alt="accesibilityImage"
                   />
                 </div>
               </Col>
-              <Col lg={6} className="contact-image-column">
+              <Col lg={6} className="about-details-column">
                 <i className="fas fa-headset me-2 text-info"></i>
                 Accesibilitate: Credem că aplicația noastră ar trebui să fie
-                accesibilă pentru toate PFA-urile, indiferent de bugetul lor.
+                accesibilă pentru toate PFA-urile, indi ferent de bugetul lor.
               </Col>
             </Row>
           </li>
           <li className="list-group-item" id="about-page-item">
             <Row className="my-5">
-              <Col lg={6} className="contact-image-column">
+              <Col lg={6} className="about-details-column">
                 <i className="fas fa-headset me-2 text-info"></i> Asistență: Ne
                 angajăm să oferim clienților noștri o asistență excelentă.
                 Echipa noastră este întotdeauna aici pentru a vă ajuta cu orice
                 întrebări pe care le-ați putea avea.
               </Col>
-              <Col lg={6} className="contact-details-column">
+              <Col lg={6} className="contact-image-column">
                 <div className="d-flex justify-content-center align-items-center">
                   <img
-                    src={securityImage}
+                    src={assistanceImage}
                     href="Contact us image"
                     className="contact-image"
                     style={{ width: "20vw", minWidth: "300px" }}
-                    alt="securityImage"
+                    alt="assistanceImage"
                   />
                 </div>
               </Col>
