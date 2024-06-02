@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+.contact-details-columnn{
+  background-color: #23AAC3;
+  background-color: #027085;
+  background-color: #73CCDD;
+  background-color: #001013;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contact-details-column{
+  background-color: #027085;
+  font-size: 18px
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.about-details-column{
+  background-color: #23AAC3;
+  background-color: #027085;
+  background-color: #73CCDD;
+  background-color: #001013;
+  background-color: #027085;
+  font-size: 30px;
+  text-align: justify;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.text-color-white{
+  color: #FCFCFC !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-color-black{
+  color: #001013 !important;
+}
+
+.visitor-navbar{
+  background-color: #23AAC3 !important;
+}
+
+img#about-title-img {
+  height: 100px;
+}
+.about-container .styled-stack-blue{
+    background-color: #027085;
+    color: white;
+    border-bottom-left-radius: 7.5px;
+    border-bottom-right-radius: 7.5px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.about-container .styled-stack-white{
+    margin-bottom: 40px;
+}
+
+#about-page-item{
+    background-color: #027085;
+    color: white;
 }
