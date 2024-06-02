@@ -10,6 +10,18 @@
   font-size: 18px
 }
 
+.about-details-column{
+  background-color: #23AAC3;
+  background-color: #027085;
+  background-color: #73CCDD;
+  background-color: #001013;
+  background-color: #027085;
+  font-size: 30px;
+  text-align: justify;
+  align-items: center;
+  justify-content: center;
+}
+
 .text-color-white{
   color: #FCFCFC !important;
 }
@@ -22,11 +34,9 @@
   background-color: #23AAC3 !important;
 }
 
-.about-tile-image{
-
-
+img#about-title-img {
+  height: 100px;
 }
-
 .about-container .styled-stack-blue{
     background-color: #027085;
     color: white;
