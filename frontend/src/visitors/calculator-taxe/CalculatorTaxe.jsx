@@ -20,19 +20,17 @@ const CalculatorTaxe = () => {
 
     let contributieCAS = 0;
 
-    if(venitLunarBrut < 3300){
-      contributieCAS = venitLunarBrut * 0.25;
-    } else if (venitLunarBrut > 3300 && venitLunarBrut < 6600){
+    if (venitLunarBrut >= 3300 && venitLunarBrut < 6600){
       contributieCAS = 3300 * 0.25;
     }
-    else{
+    else if(venitLunarBrut >= 6600){
       contributieCAS = 6600 * 0.25;
     }
 
-    const venitImpozitabil = venitLunarBrut - contributieCASS - contributieCAS - cheltuieliDeductibile;
-    const impozitPeVenit = venitImpozitabil * 0.1;
+    const venitImpozabil = venitLunarBrut - contributieCASS - contributieCAS - cheltuieliDeductibile;
+    const impozitPeVenit = venitImpozabil * 0.1;
 
-    const venitNet = venitImpozitabil - impozitPeVenit;
+    const venitNet = venitImpozabil - impozitPeVenit;
     
     return {
       impozitPeVenit,

@@ -22,7 +22,7 @@ const AccountingMenu = () => {
               <Card.Body className="card-body">
                 <Card.Title>Calculator taxe</Card.Title>
                 <Card.Text>
-                  Calculează venitul net după plătirea taxelor la PFA.
+                  Calculează venitul net după plătirea taxelor la PFA in 2024.
                 </Card.Text>
               </Card.Body>
             </a>
