@@ -15,7 +15,7 @@ const UploadFiles = ({field, label, files, setFiles, canUploadMultipleFiles=fals
 
     const onDrop = (uploadedFiles) => {
         if(uploadedFiles.length > 0){
-            setFiles([...files, ...uploadedFiles]);
+            setFiles(uploadedFiles);
         }
     };
 
@@ -25,7 +25,7 @@ const UploadFiles = ({field, label, files, setFiles, canUploadMultipleFiles=fals
 
     return (
         <Form.Group controlId={field}>
-            <Form.Label>{label}</Form.Label>
+            <Form.Label><p className="lead">{label}</p></Form.Label>
             <Dropzone 
                 onDrop={onDrop} 
                 multiple={canUploadMultipleFiles}
@@ -35,13 +35,13 @@ const UploadFiles = ({field, label, files, setFiles, canUploadMultipleFiles=fals
                 {({ getRootProps, getInputProps }) => (
                     <div {...getRootProps({ className: "dropzone-upload-files dropzone p-3 d-flex align-items-center justify-content-center disabled mb-4"})}>
                         <input {...getInputProps()} />
-                        <p className="m-0 text-center">Plasați fițierele aici pentru încărcare <br/> sau selectați din computer</p>
+                        <p className="lead m-0 text-center" style={{fontSize: "18px"}}>Plasați factura aici pentru încărcare <br/> sau selectați din computer</p>
                     </div>
                 )}
             </Dropzone>
             { files.length ? (
                 <div className="mb-4">
-                    <p className="fw-bold" style={{fontSize: "14px"}}>Fișiere atașate:</p>
+                    <p style={{fontSize: "18px"}}>Factură atașată:</p>
                     <ListGroup>
                     {
                         files.map((file, index) => (

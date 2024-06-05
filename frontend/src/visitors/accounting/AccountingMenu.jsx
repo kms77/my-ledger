@@ -9,11 +9,11 @@ const AccountingMenu = () => {
 
   return (
     <div className="container about-container mb-5">
-      <h1 className="display-4 mt-4" >Meniu contabilitate</h1>
+      <h1 className="display-4 my-4" >Meniu contabilitate</h1>
       <Row>
         <Col>
         <div className="d-flex justify-content-center">
-        <Card title="Acceseaza calculatorul de taxe" className="card mx-4 my-2">
+        <Card title="Acceseaza calculatorul de taxe" className="card mx-4 mb-4 mt-2">
           <a href="/calculator" class="card-link">
             <Card.Header className="d-flex justify-content-center align-items-center card-header">
               <Card.Img variant="top" src={calculatorImage} className="card-image"/>
@@ -32,8 +32,8 @@ const AccountingMenu = () => {
         </Col>
         <Col>
         <div className="d-flex justify-content-center">
-        <Card title="Accesează facturile tale" className="card mx-4 my-2">
-          <a href="/calculator" class="card-link">
+        <Card title="Accesează facturile tale" className="card mx-4 mb-4 mt-2">
+          <a href="/facturi" class="card-link">
             <Card.Header className="d-flex justify-content-center align-items-center card-header">
               <Card.Img variant="top" src={facturaImage} className="card-image"/>
               </Card.Header>

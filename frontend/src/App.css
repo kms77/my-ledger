@@ -139,3 +139,35 @@ img#about-title-img {
   background-color: #02849e !important;
   border: 2px solid black !important;
 }
+
+.dropzone-upload-files{
+  border: 3px dashed #eeeeee;
+}
+
+.dropzone-upload-files:hover{
+  border-color: #027085;
+  background-color: #f3fafb;
+}
+
+.equal-width-tabs .nav-tabs {
+  display: flex;
+}
+
+.equal-width-tabs .nav-item {
+  flex: 1;
+  text-align: center;
+}
+
+.equal-width-tabs .nav-link, .equal-width-tabs .nav-link:hover{
+  width: 100%;
+  text-align: center;
+  background-color: #f8f9fa;
+  color: #001013;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.equal-width-tabs .nav-link.active,
+.equal-width-tabs .nav-link[aria-selected="true"] {
+  background-color: #027085 !important;
+  color: #FCFCFC !important;
+}

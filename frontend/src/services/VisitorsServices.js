@@ -18,7 +18,7 @@ function getInvoices(){
     return axios.get( url, {
         responseType : "blob"
     });
-  }
+}
 
 export const VisitorsServices = {
     saveInvoices,

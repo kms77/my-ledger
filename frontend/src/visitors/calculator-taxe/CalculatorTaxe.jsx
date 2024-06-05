@@ -61,9 +61,9 @@ const CalculatorTaxe = () => {
     };
 
   return (
-    <div className="container about-container">
+    <div className="container about-container mb-5">
       <h1 className="display-4 mt-4" >Calculator Taxe</h1>
-      <p className="lead mt-5">Calculează venitul net după plătirea taxelor în cadrul unui PFA. </p>
+      <p className="lead my-4">Calculează venitul net după plătirea taxelor în cadrul unui PFA. </p>
 
       <Row>
         <Col>

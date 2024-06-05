@@ -11,18 +11,39 @@ const InvoiceManagement = () => {
   const [invoices, setInvoices] = useState([]);
 
   useEffect(() => {
-    // get list of subordinates to populate user select
-    VisitorsServices.getInvoices().then((response) => {
-        console.log("Response: ", response);
-        // if(response.data.success){
-        //     var subordinates = [{label: "", value:"none"}];
-        //     unpackUserTree(res.data.data, subordinates);
-        //     setSubColleagues(subordinates);
-        // }
-    });
-}, [invoices]);
+    // get list of invoices
+    setInvoices(
+      [
+        {
+          "content": null,
+          "address": "Cluj Napoca, str. Nicolae Iorga, nr.25",
+          "filename": "invoice",
+          "emitDate": "2024-06-07",
+          "user_id": 1,
+        },
+        {
+          "content": null,
+          "address": "Sibiu, str. Nicolae Iorga, nr.25",
+          "filename": "invoice2",
+          "emitDate": "2024-06-05",
+          "user_id": 1,
+        },
+        {
+          "content": null,
+          "address": "Oradea, str. Nicolae Iorga, nr.25",
+          "filename": "invoice3",
+          "emitDate": "2024-06-04",
+          "user_id": 1,
+        }
+      ]
+    )
+    // VisitorsServices.getInvoices().then((response) => {
+    //   console.log(response);
+    //   setInvoices(response.data);
+    // });
+}, []);
 
-  const onSubmitFiles = async (event) => {
+  const onSubmitFile = async (event) => {
     event.preventDefault();
     try{
         const formData = new FormData();
@@ -30,80 +51,100 @@ const InvoiceManagement = () => {
         
         formData.append(`file`, files[0], files[0].name);
 
-        var invoice={
+        var invoice = {
           "content": null,
-          "address": "address",
-          "filename": "invoice",
-          "emitDate": "2019-11-11",
+          "address": "Brasov, str. Nicolae Iorga, nr.25",
+          "filename": "invoice4",
+          "emitDate": "2024-06-03",
           "user_id": 1,
-        }
-        console.log(files[0].name, files[0]);
+        };
         formData.append("invoice", JSON.stringify(invoice));
         // send date to server
-        const user_id = 1;
-        VisitorsServices.saveInvoices(formData).then((response) => {
-          console.log("Response: ", response);
-        })
+        //VisitorsServices.saveInvoices(formData).then((response) => {
+        //  console.log("Response: ", response);
+          setInvoices([...invoices, invoice])
+       // });
+       setFiles([]);
     } catch (error){
         console.error('Error at form submition: ', error);
     }
 }
 
   return (
-    <Container>
+    <Container className="mb-5">
       <Row>
         <Col>
-          <h1 className="mt-4" >Gestionare facturi</h1>
+          <h1 className="display-4 mt-4" >Gestionare facturi</h1>
         </Col>
       </Row>
-      <Row className="mb-4">
+      <Row className="mt-4">
         <Col>
           <Tabs
             id="invoice-management"
             activeKey={key}
             onSelect={(selectedKey) => setKey(selectedKey)}
-            className="mb-3"
+            className="mb-3 equal-width-tabs"
           >
             <Tab eventKey="all-invoices" title="Viziualizare facturi">
               <Row>
                 <Col>
-                  <table className="table table-striped text-center mt-2 table-light">
+                  <table className="table table-striped text-left mt-2 table-light">
                     <thead className="table-secondary">
                         <tr>
-                            <th>Nr.</th>
+                            <th style={{textAlign: "center"}}>Nr.</th>
                             <th>Filename</th>
-                            <th style={{width:"10%"}}>Data</th>
+                            <th>Data</th>
                             <th>Adresă</th>
                         </tr>
                     </thead>
-                      <tbody>
-                        <td>OK</td>
-                        <td>OK</td>
-                        <td>OK</td>
-                        <td>OK</td>
-                      </tbody>
+                    {/*  show invoices */}
+                    {
+                      invoices?.length > 0 ? (
+                        <tbody>
+                          {
+                            invoices.map((invoice, index) => (
+                              <tr key={index}>
+                                <td align="center">{index+1}</td>
+                                <td>{invoice.filename}</td>
+                                <td>{invoice.emitDate}</td>
+                                <td>{invoice.address}</td>
+                              </tr>
+                            ))
+                          }
+                        </tbody>
+                      ) : (
+                        <tbody>
+                          <tr>
+                              <td colSpan="4" align="center" className="p-3">
+                                  Nu sunt facturi adăugate.
+                              </td>
+                          </tr>
+                        </tbody>
+                      )
+                    }
                   </table>
                 </Col>
               </Row>
             </Tab>
-            <Tab eventKey="profile" title="Încarcă facturi">
+            <Tab eventKey="profile" title="Încarcă factură">
               <Form>
                 <Row>
                     <Col xl={6} md={8} xs={12}>
                         <UploadFiles
                             field="invoicesFilesID"
-                            label="Atașează facturi:"
+                            label="Atașează factură:"
                             files={files}
                             setFiles={setFiles}
                             canUploadMultipleFiles={false}
                         />
                         <div className="d-flex justify-content-end">
                           <LoaderButton
-                              onClick={(event) => onSubmitFiles(event)}
+                              onClick={(event) => onSubmitFile(event)}
                               className="btn btn-default button-default"
-                              text="Trimite documente"
+                              text="Salvează factură"
                               backgroundColor="#027085"
                               style={{width: "200px"}}
+                              conditionForDisable={files.length === 0}
                           />
                         </div>
                     </Col>
