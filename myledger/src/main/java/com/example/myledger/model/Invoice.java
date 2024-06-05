@@ -26,7 +26,7 @@ public class Invoice {
     @Column(name = "filename")
     private String filename;
     @Lob
-    @Column(name = "content")
+    @Column(name = "content", columnDefinition = "MEDIUMBLOB")
     private byte[] content;
     @Column(name = "emitDate")
     private Date emitDate;

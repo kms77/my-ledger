@@ -14,17 +14,21 @@ const InvoiceManagement = () => {
     try{
         const formData = new FormData();
         // append each file to the form data
-        files.forEach((file, index) => {
-            formData.append(`files[${index}]`, file);
-        });
-        formData.append("content", null);
-        formData.append("address", "address");
-        formData.append("filename", "invoice");
-        formData.append("emitDate", "2019-11-11");
-        formData.append("user_id", 1);
+        
+        formData.append(`file`, files[0], files[0].name);
+
+        var invoice={
+          "content": null,
+          "address": "address",
+          "filename": "invoice",
+          "emitDate": "2019-11-11",
+          "user_id": 1,
+        }
+        console.log(files[0].name, files[0]);
+        formData.append("invoice", JSON.stringify(invoice));
         // send date to server
         const user_id = 1;
-        VisitorsServices.saveInvoices(user_id, formData).then((response) => {
+        VisitorsServices.saveInvoices(formData).then((response) => {
           console.log("Response: ", response);
         })
     } catch (error){
@@ -60,7 +64,7 @@ const InvoiceManagement = () => {
                             label="Atașează facturi:"
                             files={files}
                             setFiles={setFiles}
-                            canUploadMultipleFiles={true}
+                            canUploadMultipleFiles={false}
                         />
                         <div className="d-flex justify-content-end">
                           <LoaderButton
