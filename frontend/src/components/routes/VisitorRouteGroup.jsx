@@ -7,6 +7,7 @@ import AboutV from "../../visitors/about/AboutV";
 import AccountingMenu from "../../visitors/accounting/AccountingMenu";
 import CalculatorTaxe from "../../visitors/calculator-taxe/CalculatorTaxe";
 import InvoiceManagement from "../../visitors/accounting/InvoiceManagement";
+import Home from "../../visitors/home/Home";
 
 const VisitorRouteGroup = () => {
     return (
@@ -18,6 +19,7 @@ const VisitorRouteGroup = () => {
                 <Route path="contabil" element={<AccountingMenu />}></Route>
                 <Route path="facturi" element={<InvoiceManagement />} />
                 <Route path="calculator" element={<CalculatorTaxe />}></Route>
+                <Route path="*" element={<Home />}></Route>
             </Routes>
             <VisitorFooter />
         </BrowserRouter>
