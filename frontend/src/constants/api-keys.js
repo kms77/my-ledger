@@ -1,5 +1,5 @@
 const API_KEYS = {
-    API_URL: "https://myledger:8888/api",
+    API_URL: "https://localhost:8080/api",
     WEBSITE_URL: "http://myledger.ro"
 };
 

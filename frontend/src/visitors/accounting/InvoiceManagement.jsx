@@ -17,6 +17,11 @@ const InvoiceManagement = () => {
         files.forEach((file, index) => {
             formData.append(`files[${index}]`, file);
         });
+        formData.append("content", null);
+        formData.append("address", "address");
+        formData.append("filename", "invoice");
+        formData.append("emitDate", "2019-11-11");
+        formData.append("user_id", 1);
         // send date to server
         const user_id = 1;
         VisitorsServices.saveInvoices(user_id, formData).then((response) => {
