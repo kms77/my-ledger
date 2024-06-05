@@ -1,6 +1,8 @@
 import React, {useState} from "react";
-import { Row, Col, Form, Container, Tabs, Tab, Button} from "react-bootstrap";
+import { Row, Col, Form, Container, Tabs, Tab} from "react-bootstrap";
 import UploadFiles from "../../components/files/UploadFiles";
+import LoaderButton from "../../components/buttons/LoaderButton";
+import { VisitorsServices } from "../../services/VisitorsServices";
 
 const InvoiceManagement = () => {
 
@@ -16,6 +18,10 @@ const InvoiceManagement = () => {
             formData.append(`files[${index}]`, file);
         });
         // send date to server
+        const user_id = 1;
+        VisitorsServices.saveInvoices(user_id, formData).then((response) => {
+          console.log("Response: ", response);
+        })
     } catch (error){
         console.error('Error at form submition: ', error);
     }
@@ -23,43 +29,50 @@ const InvoiceManagement = () => {
 
   return (
     <Container>
-      <Row className="mt-4">
+      <Row>
         <Col>
-          <h3>Gestionare facturi</h3>
+          <h1 className="mt-4" >Gestionare facturi</h1>
           <p></p>
         </Col>
       </Row>
-      <Tabs
-        id="invoice-management"
-        activeKey={key}
-        onSelect={(selectedKey) => setKey(selectedKey)}
-        className="mb-3"
-      >
-        <Tab eventKey="all-invoices" title="Viziualizare facturi">
-          Vizualizare facturi
-        </Tab>
-        <Tab eventKey="profile" title="Încarcă facturi">
-          <Form>
-            <Row>
-                <Col xl={6} md={10} xs={8}>
-                    <UploadFiles
-                        field="invoicesFilesID"
-                        label="Atașează facturi:"
-                        files={files}
-                        setFiles={setFiles}
-                        canUploadMultipleFiles={true}
-                    />
-                    <Button
-                        onClick={(event) => onSubmitFiles(event)}
-                        className="btn btn-default w-100"
-                    >
-                      Trimite documente
-                    </Button>
-                </Col>
-            </Row>
-            </Form>
-        </Tab>
-      </Tabs>
+      <Row className="mb-4">
+        <Col>
+          <Tabs
+            id="invoice-management"
+            activeKey={key}
+            onSelect={(selectedKey) => setKey(selectedKey)}
+            className="mb-3"
+          >
+            <Tab eventKey="all-invoices" title="Viziualizare facturi">
+              Vizualizare facturi
+            </Tab>
+            <Tab eventKey="profile" title="Încarcă facturi">
+              <Form>
+                <Row>
+                    <Col xl={6} md={8} xs={12}>
+                        <UploadFiles
+                            field="invoicesFilesID"
+                            label="Atașează facturi:"
+                            files={files}
+                            setFiles={setFiles}
+                            canUploadMultipleFiles={true}
+                        />
+                        <div className="d-flex justify-content-end">
+                          <LoaderButton
+                              onClick={(event) => onSubmitFiles(event)}
+                              className="btn btn-default button-default"
+                              text="Trimite documente"
+                              backgroundColor="#027085"
+                              style={{width: "200px"}}
+                          />
+                        </div>
+                    </Col>
+                </Row>
+                </Form>
+            </Tab>
+          </Tabs>
+        </Col>
+      </Row>
     </Container>
   );
 };

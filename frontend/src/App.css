@@ -37,6 +37,7 @@
 img#about-title-img {
   height: 100px;
 }
+
 .about-container .styled-stack-blue{
     background-color: #027085;
     color: white;
@@ -117,4 +118,14 @@ img#about-title-img {
 
 .card{
   width: 400px;
+}
+
+.button-default{
+  background-color: #027085 !important;
+  border: 1px solid black !important;
+}
+
+.button-default:hover{
+  background-color: #02849e !important;
+  border: 2px solid black !important;
 }

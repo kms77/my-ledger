@@ -60,6 +60,7 @@ const UploadFiles = ({field, label, files, setFiles, canUploadMultipleFiles=fals
                                     title={"Scoateți fițierul: " + file.name}
                                     iconSize={15}
                                     onClick={() => onDeleteFile(index)}
+                                    color="#dc4353"
                                 />
                             </ListGroup.Item>
                         ))
