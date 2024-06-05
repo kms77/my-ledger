@@ -45,7 +45,7 @@ public class InvoiceService {
 
     private InvoiceDto convertToDto(Invoice invoice) {
         InvoiceDto dto = new InvoiceDto();
-        dto.setInvoice_id(invoice.getInvoice_id());
+//        dto.setInvoice_id(invoice.getInvoice_id());
         dto.setUser_id(invoice.getUser().getUser_id());
         dto.setAddress(invoice.getAddress());
         dto.setContent(invoice.getContent());
