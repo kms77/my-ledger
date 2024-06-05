@@ -13,6 +13,14 @@ function saveInvoices(formData){
   });
 }
 
+function getInvoices(){
+    const url = base_url + `/invoice`;
+    return axios.get( url, {
+        responseType : "blob"
+    });
+  }
+
 export const VisitorsServices = {
-    saveInvoices
+    saveInvoices,
+    getInvoices
 }

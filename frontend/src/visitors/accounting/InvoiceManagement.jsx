@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { Row, Col, Form, Container, Tabs, Tab} from "react-bootstrap";
 import UploadFiles from "../../components/files/UploadFiles";
 import LoaderButton from "../../components/buttons/LoaderButton";
@@ -8,6 +8,19 @@ const InvoiceManagement = () => {
 
   const [key, setKey] = useState('all-invoices');
   const [files, setFiles] = useState([]);
+  const [invoices, setInvoices] = useState([]);
+
+  useEffect(() => {
+    // get list of subordinates to populate user select
+    VisitorsServices.getInvoices().then((response) => {
+        console.log("Response: ", response);
+        // if(response.data.success){
+        //     var subordinates = [{label: "", value:"none"}];
+        //     unpackUserTree(res.data.data, subordinates);
+        //     setSubColleagues(subordinates);
+        // }
+    });
+}, [invoices]);
 
   const onSubmitFiles = async (event) => {
     event.preventDefault();
@@ -41,7 +54,6 @@ const InvoiceManagement = () => {
       <Row>
         <Col>
           <h1 className="mt-4" >Gestionare facturi</h1>
-          <p></p>
         </Col>
       </Row>
       <Row className="mb-4">
@@ -53,7 +65,26 @@ const InvoiceManagement = () => {
             className="mb-3"
           >
             <Tab eventKey="all-invoices" title="Viziualizare facturi">
-              Vizualizare facturi
+              <Row>
+                <Col>
+                  <table className="table table-striped text-center mt-2 table-light">
+                    <thead className="table-secondary">
+                        <tr>
+                            <th>Nr.</th>
+                            <th>Filename</th>
+                            <th style={{width:"10%"}}>Data</th>
+                            <th>Adresă</th>
+                        </tr>
+                    </thead>
+                      <tbody>
+                        <td>OK</td>
+                        <td>OK</td>
+                        <td>OK</td>
+                        <td>OK</td>
+                      </tbody>
+                  </table>
+                </Col>
+              </Row>
             </Tab>
             <Tab eventKey="profile" title="Încarcă facturi">
               <Form>
