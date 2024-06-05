@@ -37,6 +37,7 @@
 img#about-title-img {
   height: 100px;
 }
+
 .about-container .styled-stack-blue{
     background-color: #027085;
     color: white;
@@ -53,4 +54,78 @@ img#about-title-img {
 #about-page-item{
     background-color: #027085;
     color: white;
+}
+
+/* Stilurile pentru formular */
+.form-container {
+  display: flex;
+  justify-content: center; /* Centrare pe orizontală */
+  align-items: center; /* Centrare pe verticală */
+  height: 100vh; /* Înălțimea formularului va fi egală cu înălțimea vizualizării */
+}
+
+.rounded-form {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Stilurile pentru input */
+.input-venit {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Stilurile pentru buton */
+.calculate-button {
+  background-color: #23AAC3;
+  color: #050505;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calculate-button:hover {
+  background-color: #027085;
+}
+
+.card-header{
+  height: 200px;
+}
+
+.card-image{
+  height:200px;
+  width:200px !important;
+}
+
+.card:hover{
+  box-shadow: 10px 10px 5px #e1e1e1;
+  transform: scale(1.1);
+}
+
+.card-link{
+  text-decoration: none;
+  color:#001013;
+}
+
+.card{
+  width: 400px;
+}
+
+.button-default{
+  background-color: #027085 !important;
+  border: 1px solid black !important;
+}
+
+.button-default:hover{
+  background-color: #02849e !important;
+  border: 2px solid black !important;
 }
