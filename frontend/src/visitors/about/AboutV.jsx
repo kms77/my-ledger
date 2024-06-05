@@ -23,7 +23,7 @@ const AboutV = () => {
         </p>
       </Stack>
       <Stack className="styled-stack-white">
-        <h2 className="display-4 mb-4 ">Misiunea Noastră</h2>
+        <h2 className="display-3 mb-4 ">Misiunea Noastră</h2>
         <p className="lead">
           Misiunea noastră este de a oferi PFA-urilor instrumentele și resursele
           de care au nevoie pentru a prospera pe piața competitivă de astăzi.
@@ -122,12 +122,13 @@ const AboutV = () => {
           </li>
         </ul>
       </Stack>
-      <p>
+      <p className="lead">
         Suntem încrezători că aplicația noastră de gestionare PFA vă poate ajuta
         să reduceti timpul, banii și stresul asociat gestionarii unei persoane
         juridice. Înregistrați-vă pentru o încercare gratuită astăzi și vedeți
         cum vă putem ajuta să duceți afacerea dvs. la următorul nivel!
       </p>
+      <br /><br />
     </div>
   );
 };
