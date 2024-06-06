@@ -5,7 +5,7 @@ const VisitorNavbar = () => {
     return (
         <Navbar expand="sm" className="visitor-navbar py-4">
             <Container>
-                <Navbar.Brand href="#">My Ledger</Navbar.Brand>
+                <Navbar.Brand href="/home">My Ledger</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="col d-flex justify-content-start">
