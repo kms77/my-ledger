@@ -8,7 +8,7 @@ const Home = () => {
         
 
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '75vh' }}>
-            <img src={myIcon} alt="My Icon" style={{ width: '400px', height: '400px' }} />
+            <img src={myIcon} alt="My Icon" style={{ width: '35vh', height: '35vh' }} />
             <br /><br />
             <h2 className="title-screen-logo" >MyLedger</h2>
         </div>
