@@ -34,19 +34,6 @@ public class InvoiceController {
             return ResponseEntity.ok(invoiceService.getAllInvoices());
         }
 
-
-//    @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-//    public ResponseEntity<InvoiceDto> createInvoice(@RequestParam("invoice") InvoiceDto invoiceDto, @RequestParam("file") MultipartFile file){
-//        // Convert MultipartFile to byte array and set it to invoiceDto
-//        try {
-//            invoiceDto.setContent(file.getBytes());
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
-//        }
-//        return ResponseEntity.ok(invoiceService.createInvoice(invoiceDto));
-//    }
-
     //Marea batalie cu backendul, Ati -2024, 5 iunie, 10 erori omorate
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<InvoiceDto> createInvoice(@RequestPart("invoice") String invoiceStr, @RequestPart("file") MultipartFile file){
@@ -61,7 +48,4 @@ public class InvoiceController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
-
-
-        // Add other endpoints as needed
 }
