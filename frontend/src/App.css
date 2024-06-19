@@ -46,6 +46,10 @@
 
 img#about-title-img {
   height: 100px;
+  display: 'block';
+  margin-left: 'auto';
+  margin-right: 'auto';
+  width: '50%';
 }
 
 .about-container .styled-stack-blue{
