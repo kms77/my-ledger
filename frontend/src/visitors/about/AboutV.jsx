@@ -2,14 +2,25 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Stack, Row, Col } from "react-bootstrap";
 import securityImage from "../../assets/images/security.png";
-import assistanceImage from "../../assets/images/assistance.png"
-import simplicityImage from "../../assets/images/simplicity.png"
-import accessibilityImage from "../../assets/images/accesiblity.png"
+import assistanceImage from "../../assets/images/assistance.png";
+import simplicityImage from "../../assets/images/simplicity.png";
+import accessibilityImage from "../../assets/images/accesiblity.png";
+import aboutImage from "../../assets/images/about.png";
 
 const AboutV = () => {
   return (
     <div className="container about-container">
-      <img id="about-title-img" src={securityImage} alt="securityImage" />
+      <Col lg={12} className="contact-image-column">
+        <div className="d-flex justify-content-center align-items-center">
+          <img
+            src={aboutImage}
+            href="Contact us image"
+            className="contact-image"
+            style={{ width: "20vw", minWidth: "60vh" }}
+            alt="assistanceImage"
+          />
+        </div>
+      </Col>
       <Stack direction="horizontal" gap={3}>
         <h1 className="display-4 mb-4 ">Despre Noi</h1>
       </Stack>
@@ -122,12 +133,13 @@ const AboutV = () => {
           </li>
         </ul>
       </Stack>
-      <p>
+      <p className="lead">
         Suntem încrezători că aplicația noastră de gestionare PFA vă poate ajuta
         să reduceti timpul, banii și stresul asociat gestionarii unei persoane
         juridice. Înregistrați-vă pentru o încercare gratuită astăzi și vedeți
         cum vă putem ajuta să duceți afacerea dvs. la următorul nivel!
       </p>
+      <br /><br />
     </div>
   );
 };
